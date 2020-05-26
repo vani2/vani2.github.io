@@ -2,14 +2,14 @@ baseURL: ""
 disablePathToLower: true
 languageCode: en-us
 title: Ivan Vavilov blog
-theme: "archie"
-pygmentsstyle: "monokai"
+theme: archie
+pygmentsstyle: monokai
 pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
-# params:
-  # mode: "auto"
+params:
+  mode: auto
 markup:
   highlight:
-    style: monokailight
+    style: dracula
 
 # Main menu Items
