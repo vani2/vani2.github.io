@@ -1,5 +1,5 @@
 ---
-categories: coaching motivation mentor
+tags: [coaching, motivation, mentor]
 date: "2017-03-24T18:37:00Z"
 title: Coaching is not waste of time
 ---

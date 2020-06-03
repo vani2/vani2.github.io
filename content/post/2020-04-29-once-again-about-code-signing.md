@@ -1,5 +1,5 @@
 ---
-categories: xcode certificate ios
+tags: [xcode, certificate, ios]
 date: "2020-04-29T10:54:00Z"
 title: Once again about code signing 
 

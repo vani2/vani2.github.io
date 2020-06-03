@@ -1,5 +1,5 @@
 ---
-categories: architecture module ios
+tags: [architecture, module, ios]
 date: "2020-03-26T10:11:00Z"
 title: Modular iOS architecture. Our way.
 

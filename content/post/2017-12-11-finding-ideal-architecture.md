@@ -1,5 +1,5 @@
 ---
-categories: architecture ios
+tags: [architecture, ios]
 date: "2017-12-11T12:12:00Z"
 title: Finding ideal architecture
 

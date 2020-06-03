@@ -1,5 +1,5 @@
 ---
-categories: conference motivation speaking
+tags: [conference, motivation speaking]
 date: "2017-04-16T08:32:00Z"
 title: Should I speak at a conference?
 ---

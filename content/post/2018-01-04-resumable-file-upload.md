@@ -1,5 +1,5 @@
 ---
-categories: network ios
+tags: [network, ios]
 date: "2018-01-04T14:04:00Z"
 title: Resumable file upload
 

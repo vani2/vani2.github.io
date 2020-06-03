@@ -1,5 +1,5 @@
 ---
-categories: avsession ios photo video
+tags: [avsession, ios, photo, video]
 date: "2017-12-09T07:12:00Z"
 title: Anti-fraud with AVSession
 ---

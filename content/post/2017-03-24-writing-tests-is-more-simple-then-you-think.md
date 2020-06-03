@@ -1,5 +1,5 @@
 ---
-categories: tests motivation
+tags: [tests, motivation]
 date: "2017-03-24T10:37:33Z"
 title: Writing tests is more simple then you think
 ---
