@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Modular iOS architecture. Our way. - Ivan Vavilov&#39;s blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Modular iOS architecture. Our way." />
+<meta property="og:description" content="
+Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="vavilov.tech/post/2020-03-26-modular-ios-architecture/" />
+<meta property="article:published_time" content="2020-03-26T10:11:00+00:00" />
+<meta property="article:modified_time" content="2020-03-26T10:11:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modular iOS architecture. Our way."/>
+<meta name="twitter:description" content="
+Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge."/>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="vavilov.techcss/main.css" /><link rel="stylesheet" type="text/css" href="vavilov.techcss/dark.css" media="(prefers-color-scheme: dark)" />
+</head><body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="vavilov.tech">Ivan Vavilov&#39;s blog</a>
+	</div>
+	<nav>
+		
+		<a href="vavilov.tech/">Home</a>
+		
+		<a href="vavilov.tech/tags">Tags</a>
+		
+		<a href="vavilov.tech/about">About</a>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Modular iOS architecture. Our way.</h1>
+			<div class="meta">Posted on Mar 26, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<p><img src="/assets/2020-03-26/header.jpeg" alt="Header image"></p>
+<p>Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge.</p>
+<p>In this article, I tell you about our own experience to scale the developers’ team from 4 engineers up to 10 (6 teams now). The last architectural approaches scale badly for a big number of developers and different product units at one application. I prefer to call it a monolith. And our goal was to make it modular and let people work independently in their feature teams (units).</p>
+<h1 id="start-point">Start point</h1>
+<p><img src="/assets/2020-03-26/code.png" alt="Code structure"></p>
+<p>4 iOS engineers, monolithic architecture, bank project, that is 5 years old, almost 300K lines of code, 86% Swift.</p>
+<h1 id="reasons-to-do-it">Reasons to do it</h1>
+<ol>
+<li>Changes in project management model. From one team: manager, product owner, 4 iOS engineers to different units with their own teams and KPI. In the end of this year, the number of teams should be 20 (25+ iOS engineers).</li>
+<li>Cold build (with empty cache) time is over 3 minutes on the latest MacBook Pro hardware. Not so long, but we always want it faster. Hot build (from cache) is around 1m 30 seconds.</li>
+<li>At some point, we get a compilation error <em><strong>The operation couldn’t be completed. Argument list too long.</strong></em> That error occurs when the length of all source code file paths exceeds the maximum size. That path passed as an argument of xcodebuild in a terminal. The compile error can be shown at any team member because some of us use a longer path to the project folder. The workaround to put the project folder as higher as possible to root, but this is not the silver bullet. If you add new files intensively, that can be dead-end very soon. Look more at <a href="http://www.openradar.me/35879960">radar</a>.</li>
+<li>iMessage, Siri, Notification Extension targets — each of them uses some sources, they marked with membership checkmark at the right panel. That looks like a mess when adding one involves some dependent files.</li>
+</ol>
+<h1 id="high-level-plan">High-level plan</h1>
+<p>We use Cocoapods as a dependency manager, so the main target was dependent on pods. As a result, we wanted to get a thin main target (Application) with dependent modules. Monolith can be divided by vertical layers — Model, Service Layer, Common UI as well as horizontal layers — features. The great thing about pods is with modules we can connect specific dependency directly to some module, not the whole app.</p>
+<p><img src="/assets/2020-03-26/monolith-scheme.png" alt="Monolith scheme"></p>
+<h1 id="just-do-something-everything-will-be-fine">Just do something, everything will be fine</h1>
+<p>If you start without any plan, the situation can be something like this.</p>
+<p><img src="/assets/2020-03-26/monolith-services.jpeg" alt="Monolith first step"></p>
+<p>Firstly, you extract the services module. Services depend on Alamofire and also on models. But models now are a part of the monolithic main app, so you get a dependency cycle!</p>
+<p>My recommendation to start from simple things like styles (fonts, colors), other libraries that you have like a source code folder in your app (loaders, loggers, analytics). After that go to the model layer and extract models. We have different modules for models (structs) and DTOs (Decodable objects).</p>
+<p>Next, we extract code that deals with a database, common UI elements, and lastly feature modules.</p>
+<h1 id="who-is-a-module">Who is a module?</h1>
+<p>If we speak in terms of modules, that can be different things: cocoapods dependency, dynamic framework target, a dependent project with a dynamic framework as the main target (subproject). Let’s dive into each of them.</p>
+<h2 id="cocoapod">Cocoapod</h2>
+<p>Our dummy podfile will look like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">platform <span style="color:#f1fa8c">:iOS</span>, ’<span style="color:#bd93f9">13</span><span style="color:#ff79c6">.</span><span style="color:#bd93f9">0</span>’
+use_frameworks!
+
+target ‘ModuleExample’ <span style="color:#ff79c6">do</span>
+  pod ‘Model’, <span style="color:#f1fa8c">:path</span> <span style="color:#ff79c6">=&gt;</span> ‘Model’
+<span style="color:#ff79c6">end</span>
+</code></pre></div><p>Podspec for Model module.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">Pod<span style="color:#ff79c6">::</span>Spec<span style="color:#ff79c6">.</span>new <span style="color:#ff79c6">do</span> <span style="color:#ff79c6">|</span>s<span style="color:#ff79c6">|</span>
+  s<span style="color:#ff79c6">.</span>name             <span style="color:#ff79c6">=</span> ‘Model’
+  s<span style="color:#ff79c6">.</span>version          <span style="color:#ff79c6">=</span> ‘<span style="color:#bd93f9">1</span><span style="color:#ff79c6">.</span><span style="color:#bd93f9">0</span>’
+  s<span style="color:#ff79c6">.</span>summary          <span style="color:#ff79c6">=</span> ‘Model Module’
+  s<span style="color:#ff79c6">.</span>homepage         <span style="color:#ff79c6">=</span> ‘a link’
+  s<span style="color:#ff79c6">.</span>author           <span style="color:#ff79c6">=</span> { ‘vani2’ <span style="color:#ff79c6">=&gt;</span> ‘vani2<span style="color:#8be9fd;font-style:italic">@me</span><span style="color:#ff79c6">.</span>com’ }
+  s<span style="color:#ff79c6">.</span>source           <span style="color:#ff79c6">=</span> { <span style="color:#f1fa8c">:git</span> <span style="color:#ff79c6">=&gt;</span> ‘a link’, <span style="color:#f1fa8c">:tag</span> <span style="color:#ff79c6">=&gt;</span> s<span style="color:#ff79c6">.</span>version, <span style="color:#f1fa8c">:submodules</span> <span style="color:#ff79c6">=&gt;</span> <span style="color:#ff79c6">true</span> }
+  s<span style="color:#ff79c6">.</span>platform         <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">:iOS</span>, ’<span style="color:#bd93f9">13</span><span style="color:#ff79c6">.</span><span style="color:#bd93f9">0</span>’
+  s<span style="color:#ff79c6">.</span>swift_version    <span style="color:#ff79c6">=</span> ‘<span style="color:#bd93f9">5</span><span style="color:#ff79c6">.</span><span style="color:#bd93f9">1</span>’
+  s<span style="color:#ff79c6">.</span>source_files     <span style="color:#ff79c6">=</span> ‘Classes<span style="color:#ff79c6">/*</span>’
+<span style="color:#ff79c6">end</span>
+</code></pre></div><p>In the navigator it look like this.</p>
+<p><img src="/assets/2020-03-26/navigator.png" alt="Navigator with cocoapod"></p>
+<p>User.swift</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">struct</span> <span style="color:#50fa7b">User</span> {
+  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">name</span>: <span style="color:#8be9fd;font-style:italic">String</span>
+
+  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">init</span>(name: <span style="color:#8be9fd;font-style:italic">String</span>) {
+    <span style="color:#ff79c6">self</span>.name = name
+  }
+}
+</code></pre></div><p>Using in the app.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">UIKit</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Model</span>
+
+<span style="color:#ff79c6">@UIApplicationMain</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">AppDelegate</span>: UIResponder, UIApplicationDelegate {
+
+  <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">user</span> = User(name: “Johny”)
+
+  <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">application</span>(<span style="color:#ff79c6">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: <span style="color:#8be9fd;font-style:italic">Any</span>]?) -&gt; <span style="color:#8be9fd;font-style:italic">Bool</span> {
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>
+  }
+}
+</code></pre></div><p>Advantages of using Cocoapods:</p>
+<ol>
+<li>Reusable in other projects. Cocoapods let you make a standalone framework and publish it into a private repository. Reusing is simple, you just need to properly set the name of your pod and private spec repository or private git URL. If reusing is not the case, you can attach pod locally.</li>
+<li>Cocoapods make all “magic” for you (signing, importing). Cocoapods properly integrate your framework into a workspace, don’t worry about anything.</li>
+</ol>
+<p>The disadvantage is making a proper podspec.</p>
+<h2 id="dynamic-framework-target">Dynamic framework target</h2>
+<p>Just add a new target and choose the right template.</p>
+<p><img src="/assets/2020-03-26/new-framework.png" alt="Add new framework">
+<img src="/assets/2020-03-26/project.png" alt="Xcode new project">
+<img src="/assets/2020-03-26/new-file.png" alt="Add new file to framework"></p>
+<p>Don’t forget to add the framework to the main target. Also, check file membership while adding a new file to the module.</p>
+<p>Our pod file now looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">platform <span style="color:#f1fa8c">:iOS</span>, ’<span style="color:#bd93f9">13</span><span style="color:#ff79c6">.</span><span style="color:#bd93f9">0</span>’
+use_frameworks!
+
+target ‘ModuleExample’ <span style="color:#ff79c6">do</span>
+<span style="color:#ff79c6">end</span>
+
+target ‘Service’ <span style="color:#ff79c6">do</span>
+  pod ‘Model’, <span style="color:#f1fa8c">:path</span> <span style="color:#ff79c6">=&gt;</span> ‘Model’
+<span style="color:#ff79c6">end</span>
+</code></pre></div><p>Service.swift</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Foundation</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Model</span>
+
+<span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">Service</span> {
+  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">init</span>() {}
+    
+  <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">getUsers</span>() -&gt; [User] {
+    <span style="color:#ff79c6">return</span> [User(name: “Johny”)]
+  }   
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">UIKit</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Service</span>
+
+<span style="color:#ff79c6">@UIApplicationMain</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">AppDelegate</span>: UIResponder, UIApplicationDelegate {
+
+  <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">user</span> = Service().getUsers()
+    
+  <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">application</span>(<span style="color:#ff79c6">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: <span style="color:#8be9fd;font-style:italic">Any</span>]?) -&gt; <span style="color:#8be9fd;font-style:italic">Bool</span> {      
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>
+  }
+}
+</code></pre></div><p>This approach looks the easiest for us and we’ve chosen it. No need to think about signing dependencies, you just need to import your framework to targets you want. Also, it’s convenient to see all the targets in one list.</p>
+<p>Later on, we figure out the main disadvantage is you need to manage file location manually because there is no checking of a new file location inside the target folder. Also, you have one <em>pbxproj</em>-file so it’s hard to merge it.</p>
+<h2 id="subproject">Subproject</h2>
+<p>Create a new project with a dynamic framework template and add it to our workspace.</p>
+<p><img src="/assets/2020-03-26/new-project.png" alt="Xcode new subproject"></p>
+<p>Create a new project with a dynamic framework template and add it to our workspace. The result should be the following.</p>
+<p><img src="/assets/2020-03-26/new-subproject.png" alt="Xcode new subproject"></p>
+<p>Don’t forget to add <em>Database.framework</em> as a dependency to the main target as Service module earlier.</p>
+<p>In this way, you create a project with a dynamic framework target and add it as a dependency. The advantages are:</p>
+<ul>
+<li>Membership managed automatically — the file can be the target of one project only.</li>
+<li><em>pbxproj</em> is not huge, because now you have many of them.</li>
+</ul>
+<p>We using <a href="https://github.com/yonaskolb/XcodeGen">XcodeGen</a>, so the <em>pbxproj</em> merge is not very painful for our project.</p>
+<p>The main disadvantage was to disable signing by custom script.</p>
+<p>Now Application delegate looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">UIKit</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Service</span>
+<span style="color:#8be9fd;font-style:italic">import</span> <span style="color:#50fa7b">Database</span>
+
+<span style="color:#ff79c6">@UIApplicationMain</span>
+<span style="color:#8be9fd;font-style:italic">class</span> <span style="color:#50fa7b">AppDelegate</span>: UIResponder, UIApplicationDelegate {
+
+  <span style="color:#8be9fd;font-style:italic">let</span> <span style="color:#8be9fd;font-style:italic">user</span> = Service().getUsers()
+    
+  <span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">application</span>(<span style="color:#ff79c6">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: <span style="color:#8be9fd;font-style:italic">Any</span>]?) -&gt; <span style="color:#8be9fd;font-style:italic">Bool</span> {
+        
+    Database.clean()
+        
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>
+  }
+  
+}
+</code></pre></div><h2 id="other">Other</h2>
+<p>With Swift Package Manager it’s not possible to have resources in the module now, Carthage is not widely used in our project before. Git submodule management is a pain too.</p>
+<h1 id="final-architecture">Final architecture</h1>
+<p>The dependency graph has become more clean and obvious. During the extraction of modules, you’ll find some circular dependency and if you do properly, you can achieve loose coupling between modules. Siri Extension uses Services and Models. Now we are in the process of split application into features, that seems we need to use protocols for communication between modules.</p>
+<p><img src="/assets/2020-03-26/final.jpeg" alt="Final architecture scheme"></p>
+<h1 id="thats-not-so-simple">That’s not so simple</h1>
+<ul>
+<li>It’s not easy to add new functionality to the app and refactor for modules. At least you need to be a git merge ninja.</li>
+<li>Every class, property, function visible outside should be open or public so long boring changes. Also if you have structs, be ready to write an initializer for every public stricture (swift generates internal initializer).</li>
+<li>Dances with static libraries, like Google maps. Classes will be duplicated if you added it twice or more, which makes the app start slower. <em><strong>Class &lt;…&gt; is implemented in both &lt;…&gt;. One of the two will be used. Which one is undefined.</strong></em></li>
+<li>If your storyboards and nib-files contain custom classes for controls, check the module name after extracting a new module with UI classes.</li>
+</ul>
+<h1 id="other-optimizations">Other optimizations</h1>
+<p>While refactoring we tried to tune in some build settings to improve building time. They are</p>
+<ul>
+<li><em><strong>-Xfrontend -warn-long-function-bodies=300 and -Xfrontend -warn-long-expression-type-checking=300.</strong></em> With these settings, you get a warning to functions and expressions with long compile-time (300 ms).</li>
+<li>Build Active Architecture Only <em><strong>ONLY_ACTIVE_ARCH = YES</strong></em> — that tells the compiler to build for the selected device, that is much quicker.</li>
+<li>Optimization Level — No Optimization for Debug <em><strong>SWIFT_OPTIMIZATION_LEVEL = “-Onone”.</strong></em> Optimization takes some time, so no optimization is faster.</li>
+</ul>
+<h1 id="results">Results</h1>
+<ul>
+<li>After we have added 10 modules application start increased by 50 ms with a total 800 ms. The disadvantage of the static library is duplicated code and bigger application size as a result.</li>
+<li>In Xcode 11(beta 3) <em><strong>USE_SWIFT_RESPONSE_FILE</strong></em> setting was added, so paths to swift sources now passed by text file.</li>
+<li>By different build setting changes, refactor some complex code structures and modules — after small change compiler build only changed file or module, we reduce our hot build time from 1 minute 30 seconds to 23 seconds. But a cold build time increased by 60% up to almost 6 minutes.</li>
+</ul>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/vavilov.tech/tags/architecture">architecture</a></li>
+					
+					<li><a href="/vavilov.tech/tags/module">module</a></li>
+					
+					<li><a href="/vavilov.tech/tags/ios">ios</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/vani2/" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/vani297520105/" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/vavilovvani2/" title="LinkedIn"><i data-feather="linkedin"></i></a>|<a class="soc" href="https://www.facebook.com/ivan.vavilov.90/" title="Facebook"><i data-feather="facebook"></i></a>|<a class="soc" href="https://stackoverflow.com/users/1758448/ivan-vavilov" title="Stack Overflow"><i data-feather="code"></i></a>|⚡️
+	2020  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+<script>
+      feather.replace()
+</script>
+
+</div>
+    </body>
+</html>

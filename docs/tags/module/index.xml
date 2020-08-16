@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>module on Ivan Vavilov&#39;s blog</title>
+    <link>vavilov.tech/tags/module/</link>
+    <description>Recent content in module on Ivan Vavilov&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Mar 2020 10:11:00 +0000</lastBuildDate>
+    
+	<atom:link href="vavilov.tech/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modular iOS architecture. Our way.</title>
+      <link>vavilov.tech/post/2020-03-26-modular-ios-architecture/</link>
+      <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2020-03-26-modular-ios-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2020-03-26/header.jpeg&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

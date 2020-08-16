@@ -1,4 +1,5 @@
-baseURL = ""
+baseURL = "vavilov.tech"
+publishDir = "docs"
 disablePathToLower = true
 languageCode = "en-us"
 title = "Ivan Vavilov's blog"

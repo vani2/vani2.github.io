@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ivan Vavilov&#39;s blog</title>
+    <link>vavilov.tech/tags/</link>
+    <description>Recent content in Tags on Ivan Vavilov&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2020 10:54:00 +0000</lastBuildDate>
+    
+	<atom:link href="vavilov.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>certificate</title>
+      <link>vavilov.tech/tags/certificate/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/certificate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>vavilov.tech/tags/ios/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xcode</title>
+      <link>vavilov.tech/tags/xcode/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/xcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>vavilov.tech/tags/architecture/</link>
+      <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>module</title>
+      <link>vavilov.tech/tags/module/</link>
+      <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/module/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>vavilov.tech/tags/network/</link>
+      <pubDate>Thu, 04 Jan 2018 14:04:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>avsession</title>
+      <link>vavilov.tech/tags/avsession/</link>
+      <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/avsession/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>photo</title>
+      <link>vavilov.tech/tags/photo/</link>
+      <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video</title>
+      <link>vavilov.tech/tags/video/</link>
+      <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference</title>
+      <link>vavilov.tech/tags/conference/</link>
+      <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>motivation</title>
+      <link>vavilov.tech/tags/motivation/</link>
+      <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>motivation speaking</title>
+      <link>vavilov.tech/tags/motivation-speaking/</link>
+      <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/motivation-speaking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coaching</title>
+      <link>vavilov.tech/tags/coaching/</link>
+      <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/coaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mentor</title>
+      <link>vavilov.tech/tags/mentor/</link>
+      <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/mentor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tests</title>
+      <link>vavilov.tech/tags/tests/</link>
+      <pubDate>Fri, 24 Mar 2017 10:37:33 +0000</pubDate>
+      
+      <guid>vavilov.tech/tags/tests/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

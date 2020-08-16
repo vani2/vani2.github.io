@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>certificate on Ivan Vavilov&#39;s blog</title>
+    <link>vavilov.tech/tags/certificate/</link>
+    <description>Recent content in certificate on Ivan Vavilov&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2020 10:54:00 +0000</lastBuildDate>
+    
+	<atom:link href="vavilov.tech/tags/certificate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Once again about code signing</title>
+      <link>vavilov.tech/post/2020-04-29-once-again-about-code-signing/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2020-04-29-once-again-about-code-signing/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2020-04-29/agutin.png&#34; alt=&#34;Button angry person&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Signing your apps can be complicated. And we understand this.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Code signing becomes automatic since 2017 and Xcode 8 release. It’s 3 years ago. Before that was not the easy thing to manage certificate, provisioning profiles dances for many iOS engineers. I’ve eaten dog not once on it while working in a big team and someone can accidentally &lt;strong&gt;revoke&lt;/strong&gt; your certificate. I blame Apple for this for years.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

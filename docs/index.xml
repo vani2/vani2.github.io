@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ivan Vavilov&#39;s blog</title>
+    <link>vavilov.tech/</link>
+    <description>Recent content on Ivan Vavilov&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Jun 2017 19:20:00 +0000</lastBuildDate>
+    
+	<atom:link href="vavilov.tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Once again about code signing</title>
+      <link>vavilov.tech/post/2020-04-29-once-again-about-code-signing/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2020-04-29-once-again-about-code-signing/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2020-04-29/agutin.png&#34; alt=&#34;Button angry person&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Signing your apps can be complicated. And we understand this.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Code signing becomes automatic since 2017 and Xcode 8 release. It’s 3 years ago. Before that was not the easy thing to manage certificate, provisioning profiles dances for many iOS engineers. I’ve eaten dog not once on it while working in a big team and someone can accidentally &lt;strong&gt;revoke&lt;/strong&gt; your certificate. I blame Apple for this for years.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Modular iOS architecture. Our way.</title>
+      <link>vavilov.tech/post/2020-03-26-modular-ios-architecture/</link>
+      <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2020-03-26-modular-ios-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2020-03-26/header.jpeg&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Resumable file upload</title>
+      <link>vavilov.tech/post/2018-01-04-resumable-file-upload/</link>
+      <pubDate>Thu, 04 Jan 2018 14:04:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2018-01-04-resumable-file-upload/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2018-01-04/header.jpg&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In one of our mobile apps client wants to upload a big size file to a server. The main requirement was to resume upload after connection lost. Also if a connection is poor, it can be interrupted by timeout.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Finding ideal architecture</title>
+      <link>vavilov.tech/post/2017-12-11-finding-ideal-architecture/</link>
+      <pubDate>Mon, 11 Dec 2017 12:12:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2017-12-11-finding-ideal-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-12-11/header.png&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For 9 years since Redmadrobot was founded, year by year, day by day there were more features in our applications. That’s become easier to get confused with. When engineers became more than a dozen, there was another problem — how quickly swap people between projects. Outsource development has strict deadlines, and engineers have no months or weeks to dive into specifics of a new project, whilst it’s unnecessary to let people work on several projects through their career because they don’t get bored and develop new skills.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Anti-fraud with AVSession</title>
+      <link>vavilov.tech/post/2017-12-09-anti-fraud-with-avsession/</link>
+      <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2017-12-09-anti-fraud-with-avsession/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-12-09/anti-fraud.jpeg&#34; alt=&#34;anti-fraud sign&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In one of our apps, I should do something called “hidden photos”. I’ll explain it. This is not spying for our users for sure. This feature was implemented for an enterprise application, users as employees use a camera in the main process of their job. So our client wants to be sure they don’t trick and make real photos of real objects. The real scenario is to make hidden photos every 10 seconds.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>vavilov.tech/about/</link>
+      <pubDate>Sat, 03 Jun 2017 19:20:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/about/</guid>
+      <description>Hello, I&amp;rsquo;m Ivan.
+I&amp;rsquo;m experienced iOS Engineer based in Moscow. Currently Head of iOS at Redmadrobot. Still getting my hands dirty.
+Job experience  Redmadrobot (2015-present). The company I started working as iOS Engineer and now Head of iOS Department. Startups (2014-2015). In one company I make primarily social network application and app for scientists at another for iOS (iPhone and iPad) platform. Masterdata (2012-2015). Enterprise development.  Projects  Otkritie Bank, Rosevrobank.</description>
+    </item>
+    
+    <item>
+      <title>Should I speak at a conference?</title>
+      <link>vavilov.tech/post/2017-04-16-should-i-speak-at-a-conference/</link>
+      <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2017-04-16-should-i-speak-at-a-conference/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-04-16/craig-apple.jpeg&#34; alt=&#34;Craig Federighi at Apple&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next, you will read my thoughts about public talks as an engineer.
+Many of us like to visit conferences. The luckiest ones were at WWDC, F8, or Google I/O. It’s great to learn something new: about apps, architecture, motivation, and so on.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Coaching is not waste of time</title>
+      <link>vavilov.tech/post/2017-03-24-coaching-is-not-waste-of-time/</link>
+      <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2017-03-24-coaching-is-not-waste-of-time/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-03-24/header_1.jpg&#34; alt=&#34;Baby&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As a software engineer I like to coach less experienced colleagues and interns. Sometimes more, sometimes less. Our company has internships for 2 years and I actively participated in it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Writing tests is more simple then you think</title>
+      <link>vavilov.tech/post/2017-03-24-writing-tests-is-more-simple-then-you-think/</link>
+      <pubDate>Fri, 24 Mar 2017 10:37:33 +0000</pubDate>
+      
+      <guid>vavilov.tech/post/2017-03-24-writing-tests-is-more-simple-then-you-think/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-03-24/header.jpg&#34; alt=&#34;Rocket on launch&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do you write tests on your project(s)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If not, you probably try to find reasons why you don’t. If you do, send this article to your friends who don’t.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
