@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:vani2/vani2.github.io.git
-	branch = master
