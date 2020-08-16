@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ivan Vavilov&#39;s blog</title>
-    <link>vavilov.tech/tags/</link>
+    <link>vani2.github.io/tags/</link>
     <description>Recent content in Tags on Ivan Vavilov&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Apr 2020 10:54:00 +0000</lastBuildDate>
     
-	<atom:link href="vavilov.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="vani2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>certificate</title>
-      <link>vavilov.tech/tags/certificate/</link>
+      <link>vani2.github.io/tags/certificate/</link>
       <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/certificate/</guid>
+      <guid>vani2.github.io/tags/certificate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ios</title>
-      <link>vavilov.tech/tags/ios/</link>
+      <link>vani2.github.io/tags/ios/</link>
       <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/ios/</guid>
+      <guid>vani2.github.io/tags/ios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>xcode</title>
-      <link>vavilov.tech/tags/xcode/</link>
+      <link>vani2.github.io/tags/xcode/</link>
       <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/xcode/</guid>
+      <guid>vani2.github.io/tags/xcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>architecture</title>
-      <link>vavilov.tech/tags/architecture/</link>
+      <link>vani2.github.io/tags/architecture/</link>
       <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/architecture/</guid>
+      <guid>vani2.github.io/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>module</title>
-      <link>vavilov.tech/tags/module/</link>
+      <link>vani2.github.io/tags/module/</link>
       <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/module/</guid>
+      <guid>vani2.github.io/tags/module/</guid>
       <description></description>
     </item>
     
     <item>
       <title>network</title>
-      <link>vavilov.tech/tags/network/</link>
+      <link>vani2.github.io/tags/network/</link>
       <pubDate>Thu, 04 Jan 2018 14:04:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/network/</guid>
+      <guid>vani2.github.io/tags/network/</guid>
       <description></description>
     </item>
     
     <item>
       <title>avsession</title>
-      <link>vavilov.tech/tags/avsession/</link>
+      <link>vani2.github.io/tags/avsession/</link>
       <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/avsession/</guid>
+      <guid>vani2.github.io/tags/avsession/</guid>
       <description></description>
     </item>
     
     <item>
       <title>photo</title>
-      <link>vavilov.tech/tags/photo/</link>
+      <link>vani2.github.io/tags/photo/</link>
       <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/photo/</guid>
+      <guid>vani2.github.io/tags/photo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>video</title>
-      <link>vavilov.tech/tags/video/</link>
+      <link>vani2.github.io/tags/video/</link>
       <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/video/</guid>
+      <guid>vani2.github.io/tags/video/</guid>
       <description></description>
     </item>
     
     <item>
       <title>conference</title>
-      <link>vavilov.tech/tags/conference/</link>
+      <link>vani2.github.io/tags/conference/</link>
       <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/conference/</guid>
+      <guid>vani2.github.io/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>motivation</title>
-      <link>vavilov.tech/tags/motivation/</link>
+      <link>vani2.github.io/tags/motivation/</link>
       <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/motivation/</guid>
+      <guid>vani2.github.io/tags/motivation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>motivation speaking</title>
-      <link>vavilov.tech/tags/motivation-speaking/</link>
+      <link>vani2.github.io/tags/motivation-speaking/</link>
       <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/motivation-speaking/</guid>
+      <guid>vani2.github.io/tags/motivation-speaking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coaching</title>
-      <link>vavilov.tech/tags/coaching/</link>
+      <link>vani2.github.io/tags/coaching/</link>
       <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/coaching/</guid>
+      <guid>vani2.github.io/tags/coaching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mentor</title>
-      <link>vavilov.tech/tags/mentor/</link>
+      <link>vani2.github.io/tags/mentor/</link>
       <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/mentor/</guid>
+      <guid>vani2.github.io/tags/mentor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tests</title>
-      <link>vavilov.tech/tags/tests/</link>
+      <link>vani2.github.io/tags/tests/</link>
       <pubDate>Fri, 24 Mar 2017 10:37:33 +0000</pubDate>
       
-      <guid>vavilov.tech/tags/tests/</guid>
+      <guid>vani2.github.io/tags/tests/</guid>
       <description></description>
     </item>
     

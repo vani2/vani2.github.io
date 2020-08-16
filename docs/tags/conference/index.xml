@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>conference on Ivan Vavilov&#39;s blog</title>
-    <link>vavilov.tech/tags/conference/</link>
+    <link>vani2.github.io/tags/conference/</link>
     <description>Recent content in conference on Ivan Vavilov&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Apr 2017 08:32:00 +0000</lastBuildDate>
     
-	<atom:link href="vavilov.tech/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="vani2.github.io/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Should I speak at a conference?</title>
-      <link>vavilov.tech/post/2017-04-16-should-i-speak-at-a-conference/</link>
+      <link>vani2.github.io/post/2017-04-16-should-i-speak-at-a-conference/</link>
       <pubDate>Sun, 16 Apr 2017 08:32:00 +0000</pubDate>
       
-      <guid>vavilov.tech/post/2017-04-16-should-i-speak-at-a-conference/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;vavilov.tech/assets/2017-04-16/craig-apple.jpeg&#34; alt=&#34;Craig Federighi at Apple&#34;&gt;&lt;/p&gt;
+      <guid>vani2.github.io/post/2017-04-16-should-i-speak-at-a-conference/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;vani2.github.io/assets/2017-04-16/craig-apple.jpeg&#34; alt=&#34;Craig Federighi at Apple&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Next, you will read my thoughts about public talks as an engineer.
 Many of us like to visit conferences. The luckiest ones were at WWDC, F8, or Google I/O. It’s great to learn something new: about apps, architecture, motivation, and so on.&lt;/p&gt;</description>
     </item>
