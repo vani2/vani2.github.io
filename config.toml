@@ -1,4 +1,4 @@
-baseURL = "https://vani2.github.io"
+baseURL = "https://vani2.github.io/"
 publishDir = "docs"
 disablePathToLower = true
 languageCode = "en-us"
