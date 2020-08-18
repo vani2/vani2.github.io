@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ios on Ivan Vavilov&#39;s blog</title>
+    <link>https://vani2.github.io/tags/ios/</link>
+    <description>Recent content in ios on Ivan Vavilov&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2020 10:54:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://vani2.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Once again about code signing</title>
+      <link>https://vani2.github.io/post/2020-04-29-once-again-about-code-signing/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>https://vani2.github.io/post/2020-04-29-once-again-about-code-signing/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2020-04-29/agutin.png&#34; alt=&#34;Button angry person&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Signing your apps can be complicated. And we understand this.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Code signing becomes automatic since 2017 and Xcode 8 release. It’s 3 years ago. Before that was not the easy thing to manage certificate, provisioning profiles dances for many iOS engineers. I’ve eaten dog not once on it while working in a big team and someone can accidentally &lt;strong&gt;revoke&lt;/strong&gt; your certificate. I blame Apple for this for years.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Modular iOS architecture. Our way.</title>
+      <link>https://vani2.github.io/post/2020-03-26-modular-ios-architecture/</link>
+      <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
+      
+      <guid>https://vani2.github.io/post/2020-03-26-modular-ios-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2020-03-26/header.jpeg&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here at Redmadrobot, we try to deal with serious businesses and long-term projects. So many of our clients work with us for years while we as developers improve functionality by new features. We need to refactor our code base from time to time, support new iOS versions to be on the edge.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Resumable file upload</title>
+      <link>https://vani2.github.io/post/2018-01-04-resumable-file-upload/</link>
+      <pubDate>Thu, 04 Jan 2018 14:04:00 +0000</pubDate>
+      
+      <guid>https://vani2.github.io/post/2018-01-04-resumable-file-upload/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2018-01-04/header.jpg&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In one of our mobile apps client wants to upload a big size file to a server. The main requirement was to resume upload after connection lost. Also if a connection is poor, it can be interrupted by timeout.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Finding ideal architecture</title>
+      <link>https://vani2.github.io/post/2017-12-11-finding-ideal-architecture/</link>
+      <pubDate>Mon, 11 Dec 2017 12:12:00 +0000</pubDate>
+      
+      <guid>https://vani2.github.io/post/2017-12-11-finding-ideal-architecture/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2017-12-11/header.png&#34; alt=&#34;Header image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For 9 years since Redmadrobot was founded, year by year, day by day there were more features in our applications. That’s become easier to get confused with. When engineers became more than a dozen, there was another problem — how quickly swap people between projects. Outsource development has strict deadlines, and engineers have no months or weeks to dive into specifics of a new project, whilst it’s unnecessary to let people work on several projects through their career because they don’t get bored and develop new skills.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Anti-fraud with AVSession</title>
+      <link>https://vani2.github.io/post/2017-12-09-anti-fraud-with-avsession/</link>
+      <pubDate>Sat, 09 Dec 2017 07:12:00 +0000</pubDate>
+      
+      <guid>https://vani2.github.io/post/2017-12-09-anti-fraud-with-avsession/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2017-12-09/anti-fraud.jpeg&#34; alt=&#34;anti-fraud sign&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In one of our apps, I should do something called “hidden photos”. I’ll explain it. This is not spying for our users for sure. This feature was implemented for an enterprise application, users as employees use a camera in the main process of their job. So our client wants to be sure they don’t trick and make real photos of real objects. The real scenario is to make hidden photos every 10 seconds.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
