@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>coaching on Ivan Vavilov&#39;s blog</title>
-    <link>https://vani2.github.io/tags/coaching/</link>
+    <link>https://vavilov.tech/tags/coaching/</link>
     <description>Recent content in coaching on Ivan Vavilov&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Mar 2017 18:37:00 +0000</lastBuildDate>
     
-	<atom:link href="https://vani2.github.io/tags/coaching/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vavilov.tech/tags/coaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Coaching is not waste of time</title>
-      <link>https://vani2.github.io/post/2017-03-24-coaching-is-not-waste-of-time/</link>
+      <link>https://vavilov.tech/post/2017-03-24-coaching-is-not-waste-of-time/</link>
       <pubDate>Fri, 24 Mar 2017 18:37:00 +0000</pubDate>
       
-      <guid>https://vani2.github.io/post/2017-03-24-coaching-is-not-waste-of-time/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://vani2.github.io/assets/2017-03-24/header_1.jpg&#34; alt=&#34;Baby&#34;&gt;&lt;/p&gt;
+      <guid>https://vavilov.tech/post/2017-03-24-coaching-is-not-waste-of-time/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://vavilov.tech/assets/2017-03-24/header_1.jpg&#34; alt=&#34;Baby&#34;&gt;&lt;/p&gt;
 &lt;p&gt;As a software engineer I like to coach less experienced colleagues and interns. Sometimes more, sometimes less. Our company has internships for 2 years and I actively participated in it.&lt;/p&gt;</description>
     </item>
     
