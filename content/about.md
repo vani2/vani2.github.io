@@ -11,17 +11,32 @@ Hello, I'm Ivan.
 I'm experienced iOS Engineer based in Moscow. Currently Head of iOS at [Redmadrobot](https://www.redmadrobot.com). Still getting my hands dirty.
 
 # Job experience
-* **Redmadrobot** (2015-present). The company I started working as iOS Engineer and now Head of iOS Department. 
+* **Redmadrobot** (2015-present). The company I started working as iOS Engineer and now Head of iOS Department. Here I've got a wide range of technical and management challenges. 
 * **Startups** (2014-2015). In one company I make primarily social network application and app for scientists at another for iOS (iPhone and iPad) platform.
 * **Masterdata** (2012-2015). Enterprise development.
+
+# Technologies
+
+## Apple and 3rd party frameworks 
+
+SwiftUI, Widgets, SiriKit, Vision, ARKit, CoreML, CoreData, Realm, Kotlin Multiplatform.
+
+## Automation tools
+
+Fastlane, GitLab CI, Swift Package Manager.
+
+## Server side
+
+REST, WebSocket, SSL-pinning, GraphQL, Server-side Swift.
 
 # Projects
 
 * Otkritie Bank, Rosevrobank.
 * My Beeline, VEON.
-* Medtech startup.
+* Rosgosstrakh.
+* Dx by ExperimentX.
 * NSPC MIR.
-* Car sharing.
+* Moscow car sharing.
 * Soglasie.
 
 # Open source
