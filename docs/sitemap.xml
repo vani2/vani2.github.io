@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://vavilov.tech/tags/network/</loc>
+    <lastmod>2020-04-29T10:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vavilov.tech/post/2020-04-29-once-again-about-code-signing/</loc>
     <lastmod>2020-04-29T10:54:00+00:00</lastmod>
   </url>
@@ -23,7 +28,17 @@
   </url>
   
   <url>
+    <loc>https://vavilov.tech/tags/security/</loc>
+    <lastmod>2020-04-29T10:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vavilov.tech/tags/</loc>
+    <lastmod>2020-04-29T10:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vavilov.tech/post/2021-06-26-ssl-pinning/</loc>
     <lastmod>2020-04-29T10:54:00+00:00</lastmod>
   </url>
   
@@ -45,11 +60,6 @@
   <url>
     <loc>https://vavilov.tech/tags/module/</loc>
     <lastmod>2020-03-26T10:11:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vavilov.tech/tags/network/</loc>
-    <lastmod>2018-01-04T14:04:00+00:00</lastmod>
   </url>
   
   <url>

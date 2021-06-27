@@ -25,6 +25,15 @@
     </item>
     
     <item>
+      <title>Writing SSL Pinning by yourself</title>
+      <link>https://vavilov.tech/post/2021-06-26-ssl-pinning/</link>
+      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      
+      <guid>https://vavilov.tech/post/2021-06-26-ssl-pinning/</guid>
+      <description>&lt;p&gt;Intro&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Modular iOS architecture. Our way.</title>
       <link>https://vavilov.tech/post/2020-03-26-modular-ios-architecture/</link>
       <pubDate>Thu, 26 Mar 2020 10:11:00 +0000</pubDate>
