@@ -6,18 +6,19 @@
     <description>Recent content in security on Ivan Vavilov&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Apr 2020 10:54:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jun 2021 10:54:00 +0000</lastBuildDate>
     
 	<atom:link href="https://vavilov.tech/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Writing SSL Pinning by yourself</title>
+      <title>Writing SSL-Pinning by yourself</title>
       <link>https://vavilov.tech/post/2021-06-26-ssl-pinning/</link>
-      <pubDate>Wed, 29 Apr 2020 10:54:00 +0000</pubDate>
+      <pubDate>Sat, 26 Jun 2021 10:54:00 +0000</pubDate>
       
       <guid>https://vavilov.tech/post/2021-06-26-ssl-pinning/</guid>
-      <description>&lt;p&gt;Intro&lt;/p&gt;</description>
+      <description>&lt;p&gt;SSL Certificate Pinning is a mechanism that can be used to improve the security of a mobile app network connection. Pinning allows you to protect your users from &lt;a href=&#34;https://en.wikipedia.org/wiki/Man-in-the-middle_attack&#34;&gt;man-in-the-middle attack&lt;/a&gt; (MITM).
+Yes, iOS/macOS/&amp;hellip; and HTTPS have a high-security level, and you can&amp;rsquo;t read a whole HTTPS traffic of apps of someone&amp;rsquo;s iPhone. But it&amp;rsquo;s recommended to implement SSL-Pinning for financial or medical services because users&amp;rsquo; data must be protected from such attacks. So let&amp;rsquo;s dive into how easily you can protect your users and what disadvantages it has.&lt;/p&gt;</description>
     </item>
     
   </channel>
