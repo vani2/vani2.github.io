@@ -32,11 +32,6 @@ pygmentscodefencesguesssyntax = true
   url = "https://www.linkedin.com/in/vavilovvani2/"
 
 [[params.social]]
-  name = "Facebook"
-  icon = "facebook"
-  url = "https://www.facebook.com/ivan.vavilov.90/"
-
-[[params.social]]
   name = "Stack Overflow"
   icon = "code"
   url = "https://stackoverflow.com/users/1758448/ivan-vavilov"

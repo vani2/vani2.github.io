@@ -57,4 +57,4 @@ REST, WebSocket, SSL-pinning, GraphQL, Server-side Swift.
 * Coffee brewing ☕️
 * Travelling ✈️ 
 
-You can reach me out or get more information at [facebook](https://www.facebook.com/ivan.vavilov.90/), [linkedin](https://www.linkedin.com/in/vavilovvani2/) or [e-mail](mailto:vavilov2@gmail.com).
+You can reach me out or get more information at [linkedin](https://www.linkedin.com/in/vavilovvani2/) or [e-mail](mailto:vavilov2@gmail.com).
