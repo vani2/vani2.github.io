@@ -8,10 +8,11 @@ type: "page"
 
 Hello, I'm Ivan.
 
-I'm experienced iOS Engineer based in Moscow. Currently Head of iOS at [Redmadrobot](https://www.redmadrobot.com). Still getting my hands dirty.
+I'm experienced iOS Engineer. Currently iOS Tech Lead at [Swiftlane](https://www.swiftlane.com). 
 
 # Job experience
-* **Redmadrobot** (2015-present). The company I started working as iOS Engineer and now Head of iOS Department. Here I've got a wide range of technical and management challenges. 
+* **Swiftlane** (2021-present). iOS Tech Lead position, fully responsible for iOS.
+* **Redmadrobot** (2015-2021). The company I started working as iOS Engineer and leave as Head of iOS Department with three years experience. Here I've got a wide range of technical and management challenges. 
 * **Startups** (2014-2015). In one company I make primarily social network application and app for scientists at another for iOS (iPhone and iPad) platform.
 * **Masterdata** (2012-2015). Enterprise development.
 
