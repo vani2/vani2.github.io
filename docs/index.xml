@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Update existing library for async await</title>
+      <link>https://vavilov.tech/post/2021-07-16-async-await-apexy/</link>
+      <pubDate>Fri, 16 Jul 2021 12:23:00 +0000</pubDate>
+      
+      <guid>https://vavilov.tech/post/2021-07-16-async-await-apexy/</guid>
+      <description>&lt;p&gt;Async-await is a great new way to work with concurrency.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s add async-await support for &lt;a href=&#34;https://github.com/RedMadRobot/apexy-ios&#34;&gt;Apexy&lt;/a&gt; – library for organizing a network layer. The changes I describe you can find in &lt;a href=&#34;https://github.com/RedMadRobot/apexy-ios/pull/28&#34;&gt;this PR&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Writing SSL-Pinning by yourself</title>
       <link>https://vavilov.tech/post/2021-06-26-ssl-pinning/</link>
       <pubDate>Sat, 26 Jun 2021 10:54:00 +0000</pubDate>
